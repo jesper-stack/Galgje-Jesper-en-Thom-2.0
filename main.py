@@ -4,4 +4,6 @@ import random
 Woorden = ["Boom", "Roos", "Vis"]
 for woord in Woorden :
   print(woord)
-print(random.choice(Woorden))
+gekozenWoord = random.choice(Woorden)
+for letter in gekozenWoord :
+  print("_ ", end = "")
