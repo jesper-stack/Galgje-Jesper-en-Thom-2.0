@@ -1,7 +1,7 @@
 import random
 name = input("Wat is je naam? ")
 print("Welkom " + name)
-Woorden = ["Boom", "Roos", "Vis"]
+Woorden = ["boom", "roos", "vis"]
 ##
 gekozenWoord = random.choice(Woorden)
 goedgekozenletters = []
@@ -26,7 +26,7 @@ def galgje():
     else :     
       print("_ ", end = "")      
 
-
+Ik ben Thom
  
   
   galgje()
