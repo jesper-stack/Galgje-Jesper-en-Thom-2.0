@@ -13,22 +13,25 @@ def galgje():
   print(goedgekozenletters)
   print("\nKies een letter")
   gekozenletter = input()
+  aantal_beurten = 6
+  
 
   if gekozenletter in gekozenWoord :       
     goedgekozenletters.append(gekozenletter)
   else :           
     foutegekozenletters.append(gekozenletter)
+   
 
 
   for letter in gekozenWoord :
     if letter in goedgekozenletters : 
       print(letter, end= "")
     else :     
-      print("_ ", end = "")      
+      print("_ ", end = "")  
 
-Ik ben Thom
- 
-  
-  galgje()
+ for foutegekozenletters in gekozenWoord :
+   print(aantal_beurten)
+
+ galgje()
 
 galgje()
