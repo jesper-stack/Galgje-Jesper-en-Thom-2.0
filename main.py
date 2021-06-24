@@ -26,7 +26,7 @@ os.system('clear')
 name = input("Wat is je naam? ")
 print("Welkom " + name)
 print("Je begint met 6 beurten.")
-Woorden = ["boom", "roos", "vis"]
+Woorden = ["informatica", "informatiekunde", "spelletje", "aardigheidje", "scholier", "fotografie", "waardebepaling", "specialiteit", "verzekering", "universiteit", "heesterperk"]
 ##
 input("druk enter!!!!!!!!!!!!!!")
 def galgje():
