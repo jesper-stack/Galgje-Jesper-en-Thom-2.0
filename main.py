@@ -1,16 +1,20 @@
 import random
+import os
 name = input("Wat is je naam? ")
 print("Welkom " + name)
+print("Je begint met 6 beurten.")
 Woorden = ["boom", "roos", "vis"]
-print("je begint met 6 beurten")
 ##
-
+input("druk enter!!!!!!!!!!!!!!")
 def galgje():
+
   gekozenWoord = random.choice(Woorden)
   goedgekozenletters = []
   foutegekozenletters = []
   aantal_beurten = 6 
   while True :
+    os.system("clear")
+    print("Je hebt nog", aantal_beurten , "beurten over")
     print("\nDit zijn de letters die je fout hebt gekozen")
     print(foutegekozenletters)
     print("Dit zijn de letters die je goed hebt gekozen")
@@ -22,7 +26,6 @@ def galgje():
     else : 
       foutegekozenletters.append(gekozenletter)
       aantal_beurten -=1 
-      print("Je hebt nog", aantal_beurten , "beurten over")
 
     for letter in gekozenWoord :
       if letter in goedgekozenletters : 
@@ -31,7 +34,8 @@ def galgje():
         print("_ ", end = "")  
 
     if aantal_beurten == 0 : 
-      print("Jammer, je hebt verloren!")
+      print("\nJammer, je hebt verloren!")
+      print("Het woord was", gekozenWoord,".")
       break 
     contains = True
     for letter in gekozenWoord : 
@@ -41,8 +45,12 @@ def galgje():
     if contains == True :
       print("\nGefeliciteerd je hebt gewonnen!")
       break
-    print("Wil je opnieuw spelen?")
-galgje()
 
-
-
+while True :
+  galgje()
+  print("Wil je opnieuw spelen? type [ja] of [nee].")
+  if input() == "ja" :
+    continue
+  else :
+    break
+    
