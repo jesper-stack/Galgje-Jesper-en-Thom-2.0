@@ -10,7 +10,7 @@ def galgje():
   goedgekozenletters = []
   foutegekozenletters = []
   aantal_beurten = 6 
-  while aantal_beurten > 0 :
+  while True :
     print("\nDit zijn de letters die je fout hebt gekozen")
     print(foutegekozenletters)
     print("Dit zijn de letters die je goed hebt gekozen")
@@ -29,7 +29,19 @@ def galgje():
         print(letter, end= "")
       else :     
         print("_ ", end = "")  
-       
+
+    if aantal_beurten == 0 : 
+      print("Jammer, je hebt verloren!")
+      break 
+    contains = True
+    for letter in gekozenWoord : 
+      if not letter in goedgekozenletters :
+        contains = False
+
+    if contains == True :
+      print("\nGefeliciteerd je hebt gewonnen!")
+      break
+    print("Wil je opnieuw spelen?")
 galgje()
 
 
