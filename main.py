@@ -42,14 +42,22 @@ def galgje():
     print(foutegekozenletters)
     print("Dit zijn de letters die je goed hebt gekozen")
     print(goedgekozenletters)
-    gekozenletter = input("\nKies een letter: ")
-    
-    if gekozenletter in gekozenWoord :       
-      goedgekozenletters.append(gekozenletter)
+    gekozenletter = input("\nKies een letter: ").lower()
+    if not gekozenletter.isalpha() : 
+      aantal_beurten -=1
+      input("Vul alleen maar letters in!\n Druk op enter om verder te gaan.")
+    elif len(gekozenletter)>1 :
+      aantal_beurten -=1
+      input("Je kan maar één letter invoeren! \n Druk op enter om verder te gaan.")
+    elif gekozenletter in gekozenWoord : 
+      if not gekozenletter in goedgekozenletters :      
+        goedgekozenletters.append(gekozenletter)
     else : 
-      foutegekozenletters.append(gekozenletter)
+      if not gekozenletter in foutegekozenletters : 
+        foutegekozenletters.append(gekozenletter)
       aantal_beurten -=1 
-
+    foutegekozenletters = sorted(foutegekozenletters) 
+    goedgekozenletters = sorted(goedgekozenletters) 
     for letter in gekozenWoord :
       if letter in goedgekozenletters : 
         print(letter, end= "")
